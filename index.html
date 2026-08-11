@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Newsletter Tout part de toi — été 2026">
+  <title>Cet été, comment rester en contact avec le vivant ? — Tout part de toi</title>
+  <style>
+    :root{
+      --plum:#5f294c;
+      --plum-deep:#472039;
+      --terracotta:#b85f4c;
+      --orange:#dc8a28;
+      --sage:#4e5f51;
+      --cream:#fff8ed;
+      --paper:#fffdf8;
+      --ink:#30372f;
+      --muted:#756b62;
+      --line:#ead8c5;
+      --soft:#f7eadb;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:#f4eee6;
+      color:var(--ink);
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.72;
+      font-size:17px;
+    }
+    a{color:var(--plum);text-decoration-thickness:1px;text-underline-offset:3px}
+    .page{
+      width:min(860px,100%);
+      margin:0 auto;
+      background:var(--paper);
+      box-shadow:0 0 34px rgba(61,38,34,.08);
+      overflow:hidden;
+    }
+    .hero{
+      padding:64px 64px 52px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 8% 18%, rgba(220,138,40,.12) 0 2px, transparent 3px),
+        radial-gradient(circle at 92% 12%, rgba(184,95,76,.12) 0 2px, transparent 3px),
+        linear-gradient(180deg,#fff8ef 0%,#fffdf9 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .brand{
+      text-transform:uppercase;
+      letter-spacing:.25em;
+      font-size:12px;
+      color:var(--terracotta);
+      font-weight:700;
+      margin-bottom:22px;
+    }
+    h1,h2,h3{
+      font-family:Georgia,"Times New Roman",serif;
+      color:var(--plum-deep);
+      line-height:1.1;
+      margin:0;
+      font-weight:500;
+    }
+    h1{font-size:clamp(44px,7vw,72px);letter-spacing:-.025em}
+    .subtitle{
+      max-width:640px;
+      margin:22px auto 0;
+      color:var(--terracotta);
+      font-family:Georgia,"Times New Roman",serif;
+      font-style:italic;
+      font-size:21px;
+      line-height:1.5;
+    }
+    .stars{color:var(--orange);letter-spacing:.55em;margin:26px 0 0;font-size:16px}
+    main{padding:0 64px 64px}
+    section{padding:50px 0;border-bottom:1px solid var(--line)}
+    section:last-child{border-bottom:0}
+    h2{font-size:38px;margin-bottom:24px}
+    h3{font-size:27px;margin:34px 0 14px}
+    p{margin:0 0 18px}
+    .lead{font-size:19px}
+    .question{
+      margin:30px 0;
+      padding:25px 28px;
+      background:var(--soft);
+      border-left:4px solid var(--terracotta);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:24px;
+      line-height:1.4;
+      color:var(--plum-deep);
+    }
+    .sensations{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:8px 22px;
+      margin:20px 0 25px;
+      padding:20px 24px;
+      border-radius:16px;
+      background:#fbf3e9;
+    }
+    .sensations span::before{content:"✦";color:var(--orange);margin-right:10px}
+    .practice{
+      margin-top:25px;
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#fffaf3;
+    }
+    .practice-number{
+      display:inline-grid;
+      place-items:center;
+      width:42px;height:42px;
+      border-radius:50%;
+      background:var(--terracotta);
+      color:white;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+    .practice h3{margin:0 0 16px}
+    .soft-quote{
+      font-family:Georgia,"Times New Roman",serif;
+      font-style:italic;
+      color:var(--terracotta);
+      text-align:center;
+      font-size:23px;
+      padding:26px 18px 4px;
+      line-height:1.5;
+    }
+    .image-card{
+      margin:30px auto 0;
+      max-width:670px;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 13px 34px rgba(70,45,37,.13);
+      background:white;
+    }
+    .image-card img{display:block;width:100%;height:auto}
+    .image-card.small{max-width:430px}
+    .click-card{position:relative;display:block}
+    .click-card:after{
+      content:"Cliquez pour découvrir les Carnets";
+      position:absolute;
+      left:18px;right:18px;bottom:18px;
+      background:rgba(78,27,66,.94);
+      color:#fff;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:700;
+      text-align:center;
+      font-size:15px;
+    }
+    .button-wrap{text-align:center;margin:28px 0 5px}
+    .button{
+      display:inline-block;
+      text-decoration:none;
+      background:var(--plum);
+      color:#fff;
+      font-weight:700;
+      padding:14px 24px;
+      border-radius:999px;
+      box-shadow:0 7px 18px rgba(95,41,76,.18);
+    }
+    .button.alt{background:var(--terracotta)}
+    .atelier-intro{
+      text-align:center;
+      padding-bottom:32px;
+    }
+    .atelier-kicker{
+      text-transform:uppercase;
+      letter-spacing:.17em;
+      font-size:13px;
+      color:var(--terracotta);
+      font-weight:700;
+      margin-bottom:14px;
+    }
+    .atelier-title{font-size:50px}
+    .atelier-tagline{
+      font-weight:700;
+      letter-spacing:.08em;
+      color:var(--sage);
+      margin-top:14px;
+      font-size:14px;
+      text-transform:uppercase;
+    }
+    .bullet-list{padding:0;margin:24px 0 0;list-style:none}
+    .bullet-list li{margin:11px 0;padding-left:28px;position:relative}
+    .bullet-list li:before{content:"✦";position:absolute;left:0;color:var(--orange)}
+    .earlybird-note{
+      margin:28px 0 24px;
+      padding:24px 26px;
+      border:2px solid #d48a54;
+      border-radius:16px;
+      background:#fff6e8;
+    }
+    .earlybird-note strong{color:var(--terracotta);font-size:20px}
+    .caption{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:12px;
+      font-style:italic;
+    }
+    .contact-box{
+      text-align:center;
+      padding:34px 30px;
+      border-radius:22px;
+      background:var(--plum);
+      color:#fff;
+      margin-top:28px;
+    }
+    .contact-box h3{color:#fff;margin:0 0 14px}
+    .contact-box a{color:#fff;font-weight:700}
+    footer{
+      padding:42px 64px 52px;
+      text-align:center;
+      background:#f7ecdf;
+      border-top:1px solid var(--line);
+      color:#5b5149;
+      font-size:14px;
+    }
+    footer strong{color:var(--plum-deep);font-size:17px}
+    .footer-links{margin:18px 0}
+    .footer-links a{margin:0 7px}
+    @media (max-width:680px){
+      body{font-size:16px}
+      .hero{padding:46px 24px 38px}
+      main{padding:0 24px 42px}
+      section{padding:38px 0}
+      h2{font-size:32px}
+      .atelier-title{font-size:40px}
+      .sensations{grid-template-columns:1fr}
+      footer{padding:36px 24px 42px}
+      .click-card:after{font-size:13px;left:10px;right:10px;bottom:10px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="brand">Tout part de toi — Newsletter</div>
+      <h1>Cet été, comment rester en contact avec le vivant&nbsp;?</h1>
+      <p class="subtitle">Quelques nouvelles après un long silence,<br>et une invitation à rester en contact… autrement.</p>
+      <div class="stars">✦ ✧ ✦</div>
+    </header>
+
+    <main>
+      <section>
+        <p class="lead">Bonjour à toutes et tous,</p>
+        <p>Cela fait longtemps que je ne vous ai pas écrit.</p>
+        <p>Il faut dire que <strong>les canicules successives m’ont pris de l’énergie. Beaucoup d’énergie.</strong></p>
+        <p>J’espère que, là où vous êtes, tout va pour le mieux et que vous parvenez à trouver un peu de fraîcheur, du repos, des espaces où respirer.</p>
+        <p>Je sais aussi que cette chaleur, et les incendies qui ont touché de nombreux endroits du territoire, ont bouleversé beaucoup de personnes.</p>
+        <p>Il y a ce que l’on voit.<br>Ce que l’on imagine.<br>Ce que l’on ressent, parfois de loin, et qui nous atteint quand même.</p>
+
+        <div class="question"><strong>Qu’est-ce qu’on fait avec ça&nbsp;?</strong></div>
+
+        <p>Pour le moment, peut-être commencer par sentir.</p>
+        <p>Sentir ce que cette chaleur produit dans notre corps.</p>
+        <div class="sensations">
+          <span>La lourdeur.</span><span>L’agitation.</span>
+          <span>La fatigue.</span><span>La difficulté à respirer parfois.</span>
+          <span>L’envie de ne plus bouger.</span><span>Ou au contraire une forme d’énervement, d’impatience, de tension.</span>
+        </div>
+        <p>Et puis sentir aussi ce que provoquent les images des incendies, même lorsqu’ils sont loin de nous.</p>
+        <p>Est-ce que cela serre quelque part&nbsp;? Est-ce que cela coupe le souffle&nbsp;? Est-ce que cela crée de la tristesse, de la peur, de la colère, de l’impuissance&nbsp;? Est-ce que notre énergie baisse&nbsp;? Est-ce que nous nous sentons au contraire très activé·es&nbsp;?</p>
+        <p>Avant de chercher tout de suite quoi penser ou quoi faire, il peut être précieux de <strong>repérer ce qui se passe déjà en nous</strong>.</p>
+        <p>Parce que ce que nous vivons ne passe pas seulement par la pensée. Le corps reçoit lui aussi les événements, les températures, les images, les inquiétudes.</p>
+        <p>Mettre un peu de conscience sur nos sensations permet de ne pas rester seulement dans une sidération diffuse. Cela aide à distinguer ce qui nous traverse, à retrouver des appuis, et parfois à laisser apparaître plus clairement ce dont nous avons besoin&nbsp;: nous protéger, ralentir, parler à quelqu’un, bouger, nous reposer, agir…</p>
+        <p class="soft-quote">La nature, elle, reprend toujours ses droits.<br>Toujours.</p>
+      </section>
+
+      <section>
+        <h2>L’été&nbsp;: la saison du plein contact… vraiment&nbsp;?</h2>
+        <p><strong>En Gestalt, on aime penser les saisons comme des mouvements.</strong></p>
+        <p>L’été est normalement la saison du <strong>plein contact</strong>.</p>
+        <p>On sort. On rencontre. On voyage. On se baigne. On marche davantage. On mange dehors. On laisse les corps reprendre un peu de place.</p>
+        <p>Il y a quelque chose de l’expansion, de l’ouverture, de l’élan vers le monde.</p>
+        <p>Mais cette année, quelque chose est presque inversé.</p>
+        <p>Les chaleurs intenses nous invitent à fermer les volets, rester à l’intérieur, ralentir, nous protéger, parfois même nous cloîtrer.</p>
+        <p>C’est presque tout l’inverse de l’énergie habituelle de la saison.</p>
+        <div class="question">Alors qu’est-ce que l’on fait avec ça&nbsp;?<br><br><strong>Est-ce qu’il ne risque pas de nous manquer quelque chose dans le cycle du contact&nbsp;?</strong></div>
+        <p>Peut-être que la question n’est pas de forcer l’été à ressembler à l’été.</p>
+        <p>Peut-être qu’il s’agit plutôt de se demander&nbsp;:</p>
+        <p class="soft-quote"><strong>Comment puis-je rester en contact avec moi, avec le vivant et avec les autres, sans me mettre à mal&nbsp;?</strong></p>
+      </section>
+
+      <section>
+        <h2>Deux petites pratiques, toutes simples</h2>
+
+        <div class="practice">
+          <div class="practice-number">1</div>
+          <h3>Faire entrer le dehors à l’intérieur</h3>
+          <p>Choisissez un moment où la température est encore supportable&nbsp;: tôt le matin ou plus tard le soir.</p>
+          <p>Ouvrez une fenêtre. Asseyez-vous quelques instants. Et pendant trois minutes seulement, ne faites rien.</p>
+          <p>Sentez l’air sur votre peau. Écoutez les sons dehors. Regardez la lumière. Repérez une odeur, une couleur, un mouvement.</p>
+          <p>Puis demandez-vous simplement&nbsp;:</p>
+          <p class="soft-quote"><strong>«&nbsp;Qu’est-ce qui me met en contact, là, maintenant&nbsp;?&nbsp;»</strong></p>
+          <p>Pas besoin d’une grande réponse. Une sensation suffit.</p>
+        </div>
+
+        <div class="practice">
+          <div class="practice-number">2</div>
+          <h3>Laisser le corps choisir son mouvement</h3>
+          <p>Mettez une musique que vous aimez.</p>
+          <p>Pas pour faire du sport. Pas pour bien danser. Pas pour reproduire un mouvement.</p>
+          <p>Commencez simplement par sentir ce qui se passe dans votre corps en écoutant la musique.</p>
+          <p>Peut-être qu’un pied commence à battre le rythme. Que vos épaules ont envie de bouger. Que votre bassin se balance légèrement. Que vous avez envie de vous étirer, de lever les bras, de fermer les yeux.</p>
+          <p><strong>Suivez ce premier petit mouvement.</strong></p>
+          <p>Puis voyez s’il en appelle un autre.</p>
+          <p>Il ne s’agit pas de demander au corps de faire quelque chose, mais de <strong>repérer ce qu’il a spontanément envie de faire et de lui laisser un peu de place</strong>.</p>
+          <p>Deux ou trois minutes suffisent. Vous pouvez même rester assis·e.</p>
+          <p>Et à la fin, simplement observer&nbsp;:</p>
+          <p class="soft-quote"><strong>Est-ce que quelque chose a changé dans ma respiration, mon énergie, mon humeur ou ma sensation d’être là&nbsp;?</strong></p>
+        </div>
+
+        <p class="soft-quote">Le contact n’est pas forcément spectaculaire.<br>Parfois, il tient dans un souffle, un regard, une sensation de peau ou un mouvement minuscule.</p>
+      </section>
+
+      <section id="carnets">
+        <h2>Et si vous aviez envie de rester au contact de vous autrement cet été…</h2>
+        <p>Vous pouvez aussi aller faire un tour sur mon site pour <strong>(re)lire les Carnets de l’année</strong>.</p>
+        <p>J’y partage régulièrement des chroniques autour de la psychologie, de la Gestalt, des relations humaines, de la neuroatypie, de la parentalité, du couple, mais aussi de ces petits endroits de la vie où quelque chose se joue, se répète, résiste, se transforme ou nous remet en mouvement.</p>
+        <p>Il y en a pour tous les goûts, toutes les sensibilités et tous les moments de vie.</p>
+        <p>Des textes pour réfléchir.<br>D’autres pour se reconnaître.<br>D’autres encore pour déplacer légèrement le regard ou simplement laisser infuser une question.</p>
+        <p><strong>Peut-être que l’un de ces carnets fera écho à ce que vous traversez aujourd’hui.</strong></p>
+
+        <div class="image-card small">
+          <img src="images/decouvrir-les-carnets.png" alt="Capture du site Tout part de toi invitant à découvrir les Carnets">
+        </div>
+
+        <p style="text-align:center;margin-top:24px">Vous pouvez les retrouver depuis mon site&nbsp;:</p>
+        <p style="text-align:center;font-size:21px"><strong><a href="https://emilietreynetgestalt.com" target="_blank" rel="noopener noreferrer">emilietreynetgestalt.com</a></strong></p>
+        <p style="text-align:center">Puis vous laisser guider vers <strong>Les Carnets</strong>, tout en bas du site.</p>
+      </section>
+
+      <section id="cabinet">
+        <h2>Le cabinet ferme jusqu’au 24 août inclus</h2>
+        <p>Le cabinet sera <strong>fermé jusqu’au 24 août inclus</strong>.</p>
+        <p>Je vous retrouverai donc à partir du <strong>25 août</strong>, avec plaisir, pour les accompagnements individuels et de couple.</p>
+        <p>Les rendez-vous peuvent déjà être réservés en ligne&nbsp;:</p>
+        <div class="button-wrap"><a class="button" href="https://calendly.com/emilie-treynet-gestalt/seance-individuelle" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a></div>
+      </section>
+
+      <section id="atelier">
+        <div class="atelier-intro">
+          <div class="atelier-kicker">Et pendant ce temps-là… la rentrée se prépare</div>
+          <h2 class="atelier-title">Tout part de toi — L’atelier</h2>
+          <div class="atelier-tagline">Corps • Création • Lien • Pouvoir d’agir</div>
+        </div>
+        <p>Je suis très heureuse de vous présenter un projet auquel je pense depuis longtemps&nbsp;: <strong>un week-end par mois, d’octobre 2026 à juin 2027, chez Où cours-tu&nbsp;? à Lyon 9.</strong></p>
+        <p>L’idée&nbsp;? Créer un espace régulier pour ralentir, respirer, bouger, créer, explorer et surtout <strong>revenir à soi au milieu des autres</strong>.</p>
+        <p>Au fil des mois, nous traverserons différentes propositions autour du corps, du souffle, du mouvement, du théâtre et de l’improvisation, de l’écriture, de la voix, de la présence et du lien.</p>
+        <p>Ici, il n’y a pas de recherche de performance.</p>
+        <p>On vient expérimenter. Ressentir. Jouer. Créer. Reprendre confiance. Retrouver de l’élan. Et remettre un peu de vivant dans son quotidien.</p>
+        <p><strong>Aucune expérience artistique, corporelle ou théâtrale préalable n’est nécessaire.</strong></p>
+        <p class="soft-quote">Le corps est au centre.<br>La création aussi.<br>Et surtout&nbsp;: l’expérience humaine.</p>
+
+        <div class="image-card"><img src="images/atelier-couverture.png" alt="Tout part de toi — L’atelier, un week-end par mois d’octobre 2026 à juin 2027"></div>
+
+        <h3>Peut-être que cet atelier est pour vous si…</h3>
+        <ul class="bullet-list">
+          <li>vous avez besoin d’un espace régulier pour souffler et vous remettre en mouvement</li>
+          <li>vous traversez une période de transition, de fatigue ou de questionnement</li>
+          <li>vous vous sentez souvent très dans le mental, le stress ou la rumination</li>
+          <li>vous avez envie de retrouver du corps, du jeu, de l’élan et de la créativité</li>
+          <li>vous souhaitez vivre une expérience collective incarnée, sensible et humaine</li>
+        </ul>
+        <div class="image-card"><img src="images/atelier-pour-qui.png" alt="Pour qui ? — Tout part de toi L’atelier"></div>
+
+        <h3>Au fil des week-ends</h3>
+        <p>Nous explorerons notamment la respiration et la présence, le mouvement et la conscience corporelle, le théâtre et l’improvisation, l’écriture, la voix et l’expression, les explorations collectives ainsi que des temps de pause et d’intégration.</p>
+        <p>Il n’y aura pas de spectacle de fin de saison à proprement parler. En revanche, une petite forme publique pourra être présentée lors du dernier week-end, pour celles et ceux qui souhaiteront vivre aussi cette expérience.</p>
+        <div class="image-card"><img src="images/atelier-weekends.png" alt="Au fil des week-ends — contenu de Tout part de toi L’atelier"></div>
+
+        <h3>Infos pratiques</h3>
+        <p>Le parcours se déroulera à raison d’<strong>un week-end par mois</strong>, d’octobre 2026 à juin 2027, à <strong>Où cours-tu&nbsp;? — Lyon 9</strong>.</p>
+        <p>Le groupe sera volontairement limité à <strong>12 participant·es</strong>, afin de préserver la qualité des échanges et de l’expérience collective.</p>
+        <div class="image-card"><img src="images/atelier-infos.png" alt="Dates et informations pratiques de Tout part de toi L’atelier"></div>
+
+        <h3>Tarifs &amp; inscriptions</h3>
+        <div class="earlybird-note">
+          <strong>Bonne nouvelle&nbsp;: je prolonge exceptionnellement le tarif Early Bird jusqu’au 30 septembre 2026 inclus.</strong>
+          <p style="margin:10px 0 0">Le tarif Early Bird reste donc à <strong>620&nbsp;€ l’année complète</strong> jusqu’au 30 septembre. Le plein tarif de <strong>690&nbsp;€</strong> s’appliquera à partir du 1<sup>er</sup> octobre 2026.</p>
+        </div>
+        <p>Des facilités de paiement sont possibles dès l’inscription, en 3 règlements trimestriels ou en 10 mensualités.</p>
+        <div class="image-card"><img src="images/atelier-tarifs.png" alt="Visuel Tarifs et inscriptions de Tout part de toi L’atelier"></div>
+        <p class="caption">Le visuel conserve la date initiale de l’offre. Pour cette newsletter, l’Early Bird est bien prolongé jusqu’au 30 septembre 2026 inclus.</p>
+
+        <div class="contact-box">
+          <h3>Vous êtes intéressé·e&nbsp;?</h3>
+          <p>Vous pouvez simplement m’écrire pour obtenir davantage d’informations, poser vos questions ou vous inscrire.</p>
+          <p><a href="mailto:toutpartdetoi@gmail.com">toutpartdetoi@gmail.com</a></p>
+          <p style="margin-bottom:0">Il n’est pas nécessaire d’être déjà certain·e de vouloir vous engager pour me contacter. Nous pouvons simplement échanger et voir si cet espace peut vous convenir.</p>
+        </div>
+      </section>
+
+      <section style="text-align:center">
+        <h2>Et si vous vous donniez ce temps&nbsp;?</h2>
+        <p class="soft-quote">Un temps pour respirer.<br>Bouger. Créer. Rencontrer. Partager.<br><br>Et remettre un peu de vivant là où quelque chose s’était peut-être figé.</p>
+        <p>Je vous souhaite une fin d’été aussi douce que possible,<br>et me réjouis de vous retrouver très bientôt.</p>
+      </section>
+    </main>
+
+    <footer>
+      <strong>Émilie TREYNET</strong><br>
+      Psychopraticienne Gestalt<br>
+      Gestalt-thérapie &amp; médiations artistiques<br>
+      <strong>Tout part de toi</strong>
+      <div class="footer-links">
+        <a href="https://emilietreynetgestalt.com" target="_blank" rel="noopener noreferrer">emilietreynetgestalt.com</a> ·
+        <a href="mailto:toutpartdetoi@gmail.com">toutpartdetoi@gmail.com</a>
+      </div>
+      <div>Vous recevez cette lettre parce que vous avez croisé le chemin de Tout part de toi.<br>Pour vous désinscrire, envoyez simplement un mail à toutpartdetoi@gmail.com.</div>
+    </footer>
+  </div>
+</body>
+</html>
